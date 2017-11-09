@@ -1081,6 +1081,13 @@ void MainWindow::uiPidSelectSaveClicked()
 		}
 	}
 	*/
+	for (int i=0;i<ui.pidSelectTableWidget->rowCount();i++)
+	{
+		if (ui.pidSelectTableWidget->item(i,0)->checkState() == Qt::Checked)
+		{
+			addReadPidRow(ui.pidSelectTableWidget->item(i,0)->text(),ui.pidSelectTableWidget->item(i,2)->text().toInt());
+		}
+	}
 }
 
 void MainWindow::obdPidReceived(QString pid,QString val,int set, double time)

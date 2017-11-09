@@ -6,10 +6,8 @@ TEMPLATE = app
 TARGET = obdtool
 DEPENDPATH += .
 INCLUDEPATH += . /usr/include/qwt-qt4
-QT += qml quick opengl
-CONFIG += debug
+QT += core gui widgets
 #CONFIG += debug_and_release
-unix:LIBS += -lobd -lqjson -lqwt-qt4
 win32: {
 DEFINES += WINHACK=1
 
